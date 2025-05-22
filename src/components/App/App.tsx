@@ -85,7 +85,9 @@ const App = () => {
       ) : (
         !isLoading &&
         !isError &&
-        query.trim() && <ErrorMessage message="Фільми не знайдено." />
+        query.trim() && (
+          <ErrorMessage message="There was an error, please try again." />
+        )
       )}
 
       {showPagination && (
